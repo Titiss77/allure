@@ -1,10 +1,27 @@
-/* style.css */
+:root {
+    --border-radius: 17px;
+
+
+    --bg-body: #e3dcd2;
+    --bg-h-f: #b5b0a8;
+    --color-text: #5a5854;
+    --color-border: #b5b0a890;
+    --couleur-false: #a02121;
+    --couleur-font-anime: #e3dcd280;
+    --couleur-btn-anime: #69a2ff;
+    --couleur-btn-film: #7dcc9a;
+    --couleur-btn-serie: #ba95e0;
+    --couleur-btn-scan: #9ca2b0;
+    --couleur-btn-sport: #db8a8c;
+    --box-shadow: 2px 2px 20px 0px #6f706d73;
+    --box-shadow-hover: 7px 7px 7px 0px #4a4a4973;
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: var(--bg-body);
     color: #333;
     display: flex;
     justify-content: center;
@@ -13,10 +30,10 @@ body {
 }
 
 .main {
-    background: #fff;
+    background: var(--bg-h-f);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     max-width: 400px;
     width: 100%;
 }
@@ -29,6 +46,7 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: var(--color-text);
 }
 
 input[type="number"] {
@@ -36,9 +54,10 @@ input[type="number"] {
     padding: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: var(--bg-body);
 }
 
 input[type="number"]:last-of-type {
@@ -47,13 +66,15 @@ input[type="number"]:last-of-type {
 
 select {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
+    background-color: var(--bg-body);
+    color: gray;
 }
 
-button {
-    background-color: #007BFF;
-    color: #fff;
+.button button {
+    background-color: var(--color-text);
+    color: var(--bg-body);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -63,8 +84,12 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.button button:hover {
     background-color: #0056b3;
+}
+
+.resultat {
+    text-align: center;
 }
 
 .resultat label {
@@ -77,7 +102,7 @@ h7 {
     display: inline-block;
     margin-left: 10px;
     font-size: 14px;
-    color: #007BFF;
+    color: var(--color-text);
 }
 
 @media (max-width: 480px) {
@@ -90,7 +115,48 @@ h7 {
         margin-right: 0;
     }
 
-    button {
+    .button {
         font-size: 14px;
     }
+}
+
+.night_to_light {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--bg-h-f);
+    box-shadow: var(--box-shadow-hover);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.home {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--bg-h-f);
+    box-shadow: var(--box-shadow-hover);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.svg-home {
+    color: var(--color-text);
+    width: 30px;
+    padding: 10px 0 0 10px;
+}
+
+.bi-brightness-high,
+.bi-moon {
+    position: absolute;
+    top: 28px;
+    left: 26px;
+    color: var(--color-text);
+    transform: translate(-50%, -50%) scale(2);
 }
