@@ -1,0 +1,96 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.main div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: calc(33% - 10px);
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="number"]:last-of-type {
+    margin-right: 0;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.resultat label {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+h7 {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #007BFF;
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 15px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

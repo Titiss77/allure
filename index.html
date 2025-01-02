@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'Allure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="distance">
+            <label for="input-dist">Distance:</label>
+            <input type="number" name="distance" id="input-dist" placeholder="Distance">
+            <select id="unit-dist">
+                <option value="m">m</option>
+                <option value="km">km</option>
+            </select>
+        </div>
+        <div class="temps">
+            <label for="input-temps">Chrono réalisé:</label>
+            <input type="number" name="temps-h" id="input-temps h" placeholder="Heure">
+            <input type="number" name="temps-m" id="input-temps m" placeholder="Minutes">
+            <input type="number" name="temps-s" id="input-temps s" placeholder="Seconde">
+        </div>
+        <div class="button">
+            <button>Calculer</button>
+        </div>
+
+        <div class="resultat">
+            <label for="v-moy">Vitesse moyenne:</label>
+            <h7 class="v-moy">0 km/h</h7>
+            <label for="all">Allure:</label>
+            <h7 class="all">0'00 /km</h7>
+        </div>
+    </div>
+</body>
+
+</html>
